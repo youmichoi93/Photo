@@ -1,5 +1,5 @@
 <!doctype html>
-<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns="http://www.w3.org/1999/html">
 <head th:replace="fragments/common :: head('게시판')">
   <title>타이틀</title>
 </head>
@@ -13,12 +13,12 @@
   <div class="bg-light p-5 rounded">
 
       <th:block sec:authorize="isAuthenticated()">
-        <h1> <span sec:authentication="principal.username"></span>님 반가워요!</h1>
+        <h1 > 예약글 작성하는 곳입니다. </h1>
       </th:block>
 
 
 
-    <div>총 건수 : <span th:text="${#lists.size(boards)}"></span></div>
+    <div><strong><h5 >총 <span th:text="${#lists.size(boards)}"></span>건의 예약이 있습니다.</h5></strong></div>
     <table class="table table-striped">
       <thead>
       <tr>
@@ -26,7 +26,7 @@
         <th scope="col">번호</th>
         <th scope="col">제목</th>
         <th scope="col">내용</th>
-<!--        <th scope="col">작성자</th>-->
+        <th scope="col">작성자</th>
         <th scope="col">날짜</th>
 
 
@@ -52,7 +52,7 @@
 
 
     <div class="text-end">
-      <a type="button" class="btn btn-outline-primary" th:href="@{/board/form}">작성</a>
+      <a type="button" class="btn btn-outline-primary" th:href="@{/board/form}">글쓰기</a>
     </div>
   </div>
 </main>

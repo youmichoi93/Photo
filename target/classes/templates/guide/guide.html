@@ -1,5 +1,5 @@
 <!doctype html>
-<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/common :: head('메인화면')">
     <title>타이틀</title>
 
@@ -53,10 +53,11 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4" th:replace="fragments/common :: menu">
 
 </nav>
-
-
-
-
+<main class="container">
+    <div class="bg-light p-5 rounded">
+<!--여기수정-->
+        <a class="accordion-label" href="#">[Notice]</a>
+        <div class="inner">
 <div id="detailguide" class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons" role="tablist" style="display: block;">
     <a class="accordion-label ui-accordion-header ui-helper-reset ui-state-active ui-corner-top" href="#" role="tab" aria-expanded="true" tabindex="0"><span class="ui-icon ui-icon-triangle-1-s"></span>[Price]</a>
     <div class="inner ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" role="tabpanel" style="display: block; overflow: visible; padding-top: 15px; padding-bottom: 15px;">
@@ -82,6 +83,13 @@
 
         -  아동복 촬영 시 보호자와 유아는 1인으로 합니다.
     </div>
+
+</div><!--여기수정-->
+
+
+
+
+
 
 
 
@@ -133,9 +141,28 @@
         Business hours : 08:00 - 22:00 (영업시간 외 촬영 별도문의)<br>
         Email : dbal93570@naver.com
     </div>
-
-
-
 </div>
+</main>
+
+<p style="opacity:0.65; text-align:center; font-size:13px;"><a href="https://www.instagram.com/_blake_um/" target="_blank"><i class="fixed_transform simple icon-social-instagram " style="color: #2a2a2a;font-size: 16px;padding: 5px;display: inline-block;line-height:1;  "> </i></a><!--<a href=http://blog.naver.com/edagraphy target=_blank><i class="fixed_transform ii ii-blog" style="color: #212121;font-size: 15px;padding: 10px;display: inline-block;line-height:1;  "></i></a><a href=https://open.kakao.com/o/sK1EsZo target=_blank><i class="fixed_transform ii ii-kakaotalk " style="color: #212121;font-size: 15px;padding: 10px;display: inline-block;line-height:1;  "></i></a>-->
+    <br><br>Address 경기도 용인시 죽전동 달맞이로71 <span style="opacity:0.45;">ㅣ&nbsp;</span> Email dbal93570@naver.com <span style="opacity:0.45;">&nbsp;ㅣ&nbsp;</span> C.P 010-8321-5168</p>
+<p style="opacity:0.65; text-align:center; font-size:13px;">
+
+    COPYRIGHT ⓒ 2021 EDA BLAKEPHOTO ALL RIGHTS RESERVED.</p>
+
+
+
+<footer class="text-muted py-5">
+    <div class="container">
+        <p class="float-end mb-1">
+            <a href="#">Back to top</a>
+        </p>
+    </div>
+</footer>
+
+
+<script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
 </body>
 </html>

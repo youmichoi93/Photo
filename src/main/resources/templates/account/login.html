@@ -1,6 +1,6 @@
 <!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+
 
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=0">
@@ -8,7 +8,7 @@
  <meta name="description" content="">
  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
  <meta name="generator" content="Hugo 0.83.1">
- <title>Signin Template · Bootstrap v5.0</title>
+ <title>로그인</title>
 
  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
 
@@ -44,21 +44,22 @@
 
 <main>
 
-    <img class="mb-4" src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+    <h1 class="h3 mb-3 fw-normal">유미사진관</h1>
+
     <div  th:if="${param.error}" class="alert alert-danger" role="alert">
-        Invalid username and password.
+       입력이 올바르지 않습니다.
     </div>
     <div th:if="${param.logout}" class="alert alert-primary" role="alert">
-        You have been logged out.
+        로그아웃 되었습니다.
     </div>
     <div class="form-floating">
       <input type="text" class="form-control" id="username" name="username" placeholder="Username">
-      <label for="username">Username</label>
+      <label for="username">아이디</label>
     </div>
     <div class="form-floating">
       <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password">
-      <label for="inputPassword">Password</label>
+      <label for="inputPassword">비밀번호</label>
     </div>
 <!--
     <div class="checkbox mb-3">
@@ -67,8 +68,8 @@
       </label>
     </div>
 -->
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-    <a class="mt-2 w-100 btn btn-lg btn-secondary" th:href="@{/account/register}">Register</a>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">로그인</button>
+    <a class="mt-2 w-100 btn btn-lg btn-secondary" th:href="@{/account/register}">회원가입</a>
     <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
 
 </main>
@@ -76,4 +77,7 @@
 
 
 </body>
+
+
+
 </html>
