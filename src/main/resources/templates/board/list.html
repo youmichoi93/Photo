@@ -7,18 +7,27 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4" th:replace="fragments/common :: menu">
 </nav>
 
+<div>
+  <h3 class="font_3" style="font-size:50px;  text-align:center">
+                <span style="font-size:50px"><span style="font-family:helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif"><strong>Reservation</strong></span>
+                </span>
+  </h3><p class="font_8" style="font-size:20px; text-align:center"><span style="font-size:20px"><span style="font-family:helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif">총 <span th:text="${#lists.size(boards)}"></span>건의 예약이 있습니다.</span>
+                </span></p>
+
+
+</div>
+
 
 
 <main class="container">
   <div class="bg-light p-5 rounded">
 
       <th:block sec:authorize="isAuthenticated()">
-        <h1 > 예약글 작성하는 곳입니다. </h1>
+        Welcome to Youmi Studio.
       </th:block>
 
 
 
-    <div><strong><h5 >총 <span th:text="${#lists.size(boards)}"></span>건의 예약이 있습니다.</h5></strong></div>
     <table class="table table-striped">
       <thead>
       <tr>
@@ -41,7 +50,7 @@
         <td><a th:text="${board.title}"></a>
           <a href="details.html" th:href="@{/board/form(id=${board.id})}"></a></td>
         <td th:text="${board.content}"></td>
-<!--        <td th:text="${board.writer}"></td>-->
+        <td th:text="${board.writer}"></td>
         <td th:text="${board.created_at}"></td>
 
       </tr>
@@ -51,11 +60,39 @@
     </table>
 
 
+
+
     <div class="text-end">
       <a type="button" class="btn btn-outline-primary" th:href="@{/board/form}">글쓰기</a>
     </div>
+
   </div>
 </main>
+
+
+<ul class="pagination pagination-sm">
+  <li class="page-item"><a class="page-link" href="">이전</a></li>
+  <li class="page-item"><a class="page-link" href="">1</a></li>
+  <li class="page-item"><a class="page-link" href="">2</a></li>
+  <li class="page-item"><a class="page-link" href="">3</a></li>
+  <li><a class="page-link" href="">다음</a></li>
+</ul>
+
+
+<p style="opacity:0.65; text-align:center; font-size:13px;"><a href="https://www.instagram.com/_blake_um/" target="_blank"><i class="fixed_transform simple icon-social-instagram " style="color: #2a2a2a;font-size: 16px;padding: 5px;display: inline-block;line-height:1;  "> </i></a><!--<a href=http://blog.naver.com/edagraphy target=_blank><i class="fixed_transform ii ii-blog" style="color: #212121;font-size: 15px;padding: 10px;display: inline-block;line-height:1;  "></i></a><a href=https://open.kakao.com/o/sK1EsZo target=_blank><i class="fixed_transform ii ii-kakaotalk " style="color: #212121;font-size: 15px;padding: 10px;display: inline-block;line-height:1;  "></i></a>-->
+  <br><br>Address 경기도 용인시 죽전동 달맞이로71 <span style="opacity:0.45;">ㅣ&nbsp;</span> Email dbal93570@naver.com <span style="opacity:0.45;">&nbsp;ㅣ&nbsp;</span> C.P 010-8321-5168</p>
+<p style="opacity:0.65; text-align:center; font-size:13px;">
+
+  COPYRIGHT ⓒ 2021 EDA BLAKEPHOTO ALL RIGHTS RESERVED.</p>
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+  </div>
+</footer>
+
 
 
 </body>

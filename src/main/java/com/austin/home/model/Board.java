@@ -21,7 +21,7 @@ public class Board {
     private Long id;
     private String title;
     private String content;
-//    private String writer;
+    private String writer;
     private Timestamp created_at;
 //    private Integer click_cnt;
 

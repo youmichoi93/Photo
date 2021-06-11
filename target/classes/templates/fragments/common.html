@@ -22,10 +22,10 @@
 
 
 <body>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4" th:fragment="menu">
+<nav class="navbar navbar-expand-md navbar-light bg-light mb-4" th:fragment="menu">
   <div class="container-fluid">
 
-    <a href="#" class="navbar-brand d-flex align-items">
+    <a th:href="@{/}" class="navbar-brand d-flex align-items">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
       <strong>유미사진관</strong></a>
 
@@ -63,9 +63,11 @@
       <a class="btn btn-outline-success mx-2" th:href="@{/account/login}" sec:authorize="!isAuthenticated()">로그인</a>
       <a class="btn btn-outline-info" th:href="@{/account/register}" sec:authorize="!isAuthenticated()">회원가입</a>
       <form class="d-flex" th:action="@{/logout}" method="POST" sec:authorize="isAuthenticated()">
-        <h7 class="text-white mt-1"  ><span class="text-white mt-1" sec:authentication="name">사용자</span>님 로그인완료♡  </h7>
+        <h7 class="text-black mt-1 m-md-auto"  ><span class="text-black mt-1 m-md-auto" sec:authentication="name">사용자</span>님 환영합니다.  </h7>
 <!--        <span class="text-white mx-2" sec:authentication="principal.authorities">권한</span>-->
-        <button class="btn btn-outline-success" type="submit">로그아웃</button>
+
+        <button class="btn btn-outline-success ml-sm-5" type="submit">로그아웃</button>
+
       </form>
     </div>
   </div>

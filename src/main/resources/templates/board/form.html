@@ -8,9 +8,11 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4" th:replace="fragments/common :: menu">
 </nav>
 
+
+
 <main class="container">
     <div class="bg-light p-5 rounded">
-        <h1> <span sec:authentication="principal.username"></span>님♡ 해당 목록을 상세히 작성해주세요.</h1>
+<!--        <h1>Nice to meet you <span sec:authentication="principal.username"></span></h1>-->
         <br><br>
         <form action="#" th:action="@{/board/form}" th:object="${board}" method="post">
             <input type="hidden" th:field="*{id}">
@@ -24,20 +26,35 @@
                 </div>
             </div>
 
-<!--            <div class="form-group">-->
-<!--                <label for="writer">작성자</label>-->
-<!--                <input type="text" class="form-control"-->
-<!--                       th:classappend="${#fields.hasErrors('writer')} ? 'is-invalid'" id="writer"-->
-<!--                       th:value="${#authentication.name}" th:name="*{writer}">-->
-<!--                <div class="invalid-feedback" th:if="${#fields.hasErrors('writer')}" th:errors="*{writer}">-->
-<!--                    제목 에러 메시지-->
-<!--                </div>-->
-<!--            </div>-->
+            <div class="form-group">
+                <label for="writer">작성자</label>
+                <input type="text" class="form-control"
+                       th:classappend="${#fields.hasErrors('writer')} ? 'is-invalid'" id="writer" th:field="*{writer}">
+                <div class="invalid-feedback" th:if="${#fields.hasErrors('writer')}" th:errors="*{writer}">
+                    제목 에러 메시지
+                </div>
+            </div>
 
             <div class="form-group">
                 <label for="content">내용</label>
 
-                <textarea class="form-control" id="content" rows="15" th:field="*{content}" placeholder="이름,연락처,촬영날짜와시간,촬영컨셉을 작성해주세요."
+                <textarea class="form-control" id="content" rows="15" th:field="*{content}" placeholder="안녕하세요-
+
+유미사진관 입니다.
+
+아래의 기본 양식에 맞춰 예약글을 작성해주세요.
+
+예약일자 : 2021.     .     .
+예약 룸 : (예시: A룸)
+예약 시간 :  (예시 : 오후 1시~ 6시)
+스튜디오 이용 인원 :   명
+차를 가지고 오신다면 차량 수 :    대
+예약자 성함 :
+입금자 성함 :
+연락처 :
+
+유미사진관은 고객님의 방문을 항상 기대하고 있습니다.
+감사합니다♡"
                           th:classappend="${#fields.hasErrors('content')} ? 'is-invalid'"></textarea>
                 <div class="invalid-feedback" th:if="${#fields.hasErrors('content')}" th:errors="*{content}">
                     제목 에러 메시지
@@ -53,8 +70,20 @@
 </main>
 
 
+<p style="opacity:0.65; text-align:center; font-size:13px;"><a href="https://www.instagram.com/_blake_um/" target="_blank"><i class="fixed_transform simple icon-social-instagram " style="color: #2a2a2a;font-size: 16px;padding: 5px;display: inline-block;line-height:1;  "> </i></a><!--<a href=http://blog.naver.com/edagraphy target=_blank><i class="fixed_transform ii ii-blog" style="color: #212121;font-size: 15px;padding: 10px;display: inline-block;line-height:1;  "></i></a><a href=https://open.kakao.com/o/sK1EsZo target=_blank><i class="fixed_transform ii ii-kakaotalk " style="color: #212121;font-size: 15px;padding: 10px;display: inline-block;line-height:1;  "></i></a>-->
+    <br><br>Address 경기도 용인시 죽전동 달맞이로71 <span style="opacity:0.45;">ㅣ&nbsp;</span> Email dbal93570@naver.com <span style="opacity:0.45;">&nbsp;ㅣ&nbsp;</span> C.P 010-8321-5168</p>
+<p style="opacity:0.65; text-align:center; font-size:13px;">
+
+    COPYRIGHT ⓒ 2021 EDA BLAKEPHOTO ALL RIGHTS RESERVED.</p>
 
 
+<footer class="text-muted py-5">
+    <div class="container">
+        <p class="float-end mb-1">
+            <a href="#">Back to top</a>
+        </p>
+    </div>
+</footer>
 
 
 

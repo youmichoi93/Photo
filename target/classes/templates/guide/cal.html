@@ -17,14 +17,22 @@
 
                 <body>
                 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4" th:replace="fragments/common :: menu"></nav>
-                <div class="titleArea">
-                            <h2><span>Schedule</span></h2>
-                            <div id="boardinfo">예약이 확정된 스케쥴만 등록됩니다.</div>
-                        </div>
                 <div>
-                    <img  th:src="@{/css/cal.png}" style="margin-right: 150px;" >
+                    <h3 class="font_3" style="font-size:50px;  text-align:center">
+                <span style="font-size:50px"><span style="font-family:helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif"><strong>Schedule</strong></span>
+                </span>
+                    </h3><p class="font_8" style="font-size:20px; text-align:center"><span style="font-size:20px"><span style="font-family:helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif">Only the confirmed schedule will be reserved.</span>
+                </span></p>
                 </div>
-                <div class="rounded-right">
+
+<!--                -->
+                <center>
+
+                <img  th:src="@{/css/cal.png}" style="display: block; margin:auto;" >
+                </center>
+
+
+                <div class="text-md-center">
                     <a class="btn btn-primary" href="/board/list" role="button">예약하기 </a>
                 </div>
 
@@ -38,15 +46,12 @@
 
 
 
-
-            <!-- 회사정보 -->
-            <div class="center">
-
-                <p style="opacity:0.65; text-align:center; font-size:13px;"><a href="https://www.instagram.com/_blake_um/" target="_blank"><i class="fixed_transform simple icon-social-instagram " style="color: #2a2a2a;font-size: 16px;padding: 5px;display: inline-block;line-height:1;  "> </i></a><!--<a href=http://blog.naver.com/edagraphy target=_blank><i class="fixed_transform ii ii-blog" style="color: #212121;font-size: 15px;padding: 10px;display: inline-block;line-height:1;  "></i></a><a href=https://open.kakao.com/o/sK1EsZo target=_blank><i class="fixed_transform ii ii-kakaotalk " style="color: #212121;font-size: 15px;padding: 10px;display: inline-block;line-height:1;  "></i></a>-->
-                    <br><br>Address 경기도 용인시 죽전동 달맞이로71 <span style="opacity:0.45;">ㅣ&nbsp;</span> Email dbal93570@naver.com <span style="opacity:0.45;">&nbsp;ㅣ&nbsp;</span> C.P 010-8321-5168</p>
+<p style="opacity:0.65; text-align:center; font-size:13px;"><a href="https://www.instagram.com/_blake_um/" target="_blank"><i class="fixed_transform simple icon-social-instagram " style="color: #2a2a2a;font-size: 16px;padding: 5px;display: inline-block;line-height:1;  "> </i></a><!--<a href=http://blog.naver.com/edagraphy target=_blank><i class="fixed_transform ii ii-blog" style="color: #212121;font-size: 15px;padding: 10px;display: inline-block;line-height:1;  "></i></a><a href=https://open.kakao.com/o/sK1EsZo target=_blank><i class="fixed_transform ii ii-kakaotalk " style="color: #212121;font-size: 15px;padding: 10px;display: inline-block;line-height:1;  "></i></a>-->
+                <br><br>Address 경기도 용인시 죽전동 달맞이로71 <span style="opacity:0.45;">ㅣ&nbsp;</span> Email dbal93570@naver.com <span style="opacity:0.45;">&nbsp;ㅣ&nbsp;</span> C.P 010-8321-5168</p>
                 <p style="opacity:0.65; text-align:center; font-size:13px;">
 
                     COPYRIGHT ⓒ 2021 EDA BLAKEPHOTO ALL RIGHTS RESERVED.</p>
+
 
 
 
