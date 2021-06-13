@@ -34,27 +34,33 @@
                     제목 에러 메시지
                 </div>
             </div>
+<!--            d-->
+            <div class="form-group">
+                <label>예약일자</label>
+                <input type="text" class="form-control" placeholder="2021.     .     .">
+            </div>
+            <div class="form-group">
+                <label>예약룸</label>
+                <input type="text" class="form-control" placeholder="예시: A룸">
+            </div>
+            <div class="form-group">
+                <label>예약시간</label>
+                <input type="text" class="form-control" placeholder="예시 : 오후 1시~ 6시">
+            </div>
 
+
+<!--d-->
             <div class="form-group">
                 <label for="content">내용</label>
 
-                <textarea class="form-control" id="content" rows="15" th:field="*{content}" placeholder="안녕하세요-
-
-유미사진관 입니다.
+                <textarea class="form-control" id="content" rows="15" th:field="*{content}" placeholder="유미사진관 입니다.
 
 아래의 기본 양식에 맞춰 예약글을 작성해주세요.
 
-예약일자 : 2021.     .     .
-예약 룸 : (예시: A룸)
-예약 시간 :  (예시 : 오후 1시~ 6시)
-스튜디오 이용 인원 :   명
-차를 가지고 오신다면 차량 수 :    대
-예약자 성함 :
-입금자 성함 :
-연락처 :
-
 유미사진관은 고객님의 방문을 항상 기대하고 있습니다.
 감사합니다♡"
+
+
                           th:classappend="${#fields.hasErrors('content')} ? 'is-invalid'"></textarea>
                 <div class="invalid-feedback" th:if="${#fields.hasErrors('content')}" th:errors="*{content}">
                     제목 에러 메시지

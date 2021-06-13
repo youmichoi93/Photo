@@ -46,12 +46,12 @@
       <tbody>
 
       <tr th:each="board : ${boards}">
-        <th th:text="${board.id}">1</th>
-        <td><a th:text="${board.title}"></a>
+        <th th:text="${board.id}" >1</th>
+        <td width="300px" ><a th:text="${board.title}"  ></a>
           <a href="details.html" th:href="@{/board/form(id=${board.id})}"></a></td>
-        <td th:text="${board.content}"></td>
-        <td th:text="${board.writer}"></td>
-        <td th:text="${board.created_at}"></td>
+        <td th:text="${board.content}" width="500px"></td>
+        <td th:text="${board.writer}" ></td>
+        <td th:text="${board.created_at}" ></td>
 
       </tr>
 
@@ -67,16 +67,18 @@
     </div>
 
   </div>
+
+  <ul class="pagination justify-content-center mt-5" >
+    <li class="page-item"><a class="page-link" href="">이전</a></li>
+    <li class="page-item"><a class="page-link" href="">1</a></li>
+    <li class="page-item"><a class="page-link" href="">2</a></li>
+    <li class="page-item"><a class="page-link" href="">3</a></li>
+    <li><a class="page-link" href="">다음</a></li>
+  </ul>
+
 </main>
 
 
-<ul class="pagination pagination-sm">
-  <li class="page-item"><a class="page-link" href="">이전</a></li>
-  <li class="page-item"><a class="page-link" href="">1</a></li>
-  <li class="page-item"><a class="page-link" href="">2</a></li>
-  <li class="page-item"><a class="page-link" href="">3</a></li>
-  <li><a class="page-link" href="">다음</a></li>
-</ul>
 
 
 <p style="opacity:0.65; text-align:center; font-size:13px;"><a href="https://www.instagram.com/_blake_um/" target="_blank"><i class="fixed_transform simple icon-social-instagram " style="color: #2a2a2a;font-size: 16px;padding: 5px;display: inline-block;line-height:1;  "> </i></a><!--<a href=http://blog.naver.com/edagraphy target=_blank><i class="fixed_transform ii ii-blog" style="color: #212121;font-size: 15px;padding: 10px;display: inline-block;line-height:1;  "></i></a><a href=https://open.kakao.com/o/sK1EsZo target=_blank><i class="fixed_transform ii ii-kakaotalk " style="color: #212121;font-size: 15px;padding: 10px;display: inline-block;line-height:1;  "></i></a>-->
